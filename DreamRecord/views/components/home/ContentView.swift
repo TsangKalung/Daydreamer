@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
+import CalendarKit
 
 struct ContentView: View {
+    @State var selectedTab = Tab.newDream
+    
+    enum Tab: Int {
+        case newDream, DreamList, others
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        //DayView()
+        TabView(selection: $selectedTab){}
     }
 }
 

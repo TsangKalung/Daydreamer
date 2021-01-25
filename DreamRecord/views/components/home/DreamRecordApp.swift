@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 
 @main
 struct DreamRecordApp: App {

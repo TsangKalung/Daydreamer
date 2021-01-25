@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		561DAEA725A2FB0F0032D158 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DAEA625A2FB0F0032D158 /* Preview Assets.xcassets */; };
 		561DAEB225A2FB0F0032D158 /* DreamRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DAEB125A2FB0F0032D158 /* DreamRecordTests.swift */; };
 		561DAEBD25A2FB0F0032D158 /* DreamRecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DAEBC25A2FB0F0032D158 /* DreamRecordUITests.swift */; };
+		5658F47B25B067CB00956C0E /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 5658F47A25B067CB00956C0E /* SwiftUIFlux */; };
+		569C7DC925BD27CD00568F57 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 569C7DC825BD27CD00568F57 /* CalendarKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5658F47B25B067CB00956C0E /* SwiftUIFlux in Frameworks */,
+				569C7DC925BD27CD00568F57 /* CalendarKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +99,7 @@
 		561DAE9E25A2FB0E0032D158 /* DreamRecord */ = {
 			isa = PBXGroup;
 			children = (
-				561DAE9F25A2FB0E0032D158 /* DreamRecordApp.swift */,
-				561DAEA125A2FB0E0032D158 /* ContentView.swift */,
+				5658F47F25B06B6F00956C0E /* views */,
 				561DAEA325A2FB0F0032D158 /* Assets.xcassets */,
 				561DAEA825A2FB0F0032D158 /* Info.plist */,
 				561DAEA525A2FB0F0032D158 /* Preview Content */,
@@ -130,6 +133,39 @@
 			path = DreamRecordUITests;
 			sourceTree = "<group>";
 		};
+		5658F47F25B06B6F00956C0E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5658F48525B07F9600956C0E /* shared */,
+				5658F48425B07F8800956C0E /* components */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		5658F48425B07F8800956C0E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				5658F48625B07FA900956C0E /* home */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		5658F48525B07F9600956C0E /* shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		5658F48625B07FA900956C0E /* home */ = {
+			isa = PBXGroup;
+			children = (
+				561DAEA125A2FB0E0032D158 /* ContentView.swift */,
+				561DAE9F25A2FB0E0032D158 /* DreamRecordApp.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +182,10 @@
 			dependencies = (
 			);
 			name = DreamRecord;
+			packageProductDependencies = (
+				5658F47A25B067CB00956C0E /* SwiftUIFlux */,
+				569C7DC825BD27CD00568F57 /* CalendarKit */,
+			);
 			productName = DreamRecord;
 			productReference = 561DAE9C25A2FB0E0032D158 /* DreamRecord.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +257,10 @@
 				Base,
 			);
 			mainGroup = 561DAE9325A2FB0E0032D158;
+			packageReferences = (
+				5658F47925B067CB00956C0E /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+				569C7DC725BD27CD00568F57 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+			);
 			productRefGroup = 561DAE9D25A2FB0E0032D158 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -580,6 +624,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5658F47925B067CB00956C0E /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
+		569C7DC725BD27CD00568F57 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5658F47A25B067CB00956C0E /* SwiftUIFlux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5658F47925B067CB00956C0E /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
+			productName = SwiftUIFlux;
+		};
+		569C7DC825BD27CD00568F57 /* CalendarKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 569C7DC725BD27CD00568F57 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			productName = CalendarKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 561DAE9425A2FB0E0032D158 /* Project object */;
 }

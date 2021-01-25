@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CalendarKit",
+        "repositoryURL": "https://github.com/richardtop/CalendarKit.git",
+        "state": {
+          "branch": null,
+          "revision": "a2ac448e2a7e661c5ee1c839e1679c3be370019c",
+          "version": "0.14.6"
+        }
+      },
+      {
+        "package": "SwiftUIFlux",
+        "repositoryURL": "https://github.com/Dimillian/SwiftUIFlux",
+        "state": {
+          "branch": null,
+          "revision": "a48dd509702797028fa103844008239dded85063",
+          "version": "0.5.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
